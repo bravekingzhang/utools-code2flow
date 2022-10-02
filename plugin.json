@@ -2,14 +2,21 @@
 	"main": "index.html",
 	"logo": "logo.png",
 	"preload": "preload.js",
+	"platform": [
+		"darwin"
+		],
 	"development": {
-		"main": "http://127.0.0.1:3000"
+		"main": "http://127.0.0.1:4173"
 	},
 	"features": [
 		{
 			"code": "flow",
 			"explain": "启动code2flow",
-			"cmds": ["flow","code","code2flow"],
+			"cmds": [
+		  	{
+				"type": "over",
+				"label": "代码调用图"
+			} ],
 			"icon": "logo.png"
 		}
 	]

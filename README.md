@@ -2,14 +2,28 @@
 
 在utools中实现code2flow
 
-## 原理
-
+# 原理
 依赖该项目，移植到utools中来
 https://github.com/scottrogowski/code2flow
 
 ## 使用
-- 需要安装 pip3 install code2flow
-- 需要安装 brew install graphviz
+- 安装 python3，使用brew安装就好,需要是
+```shell
+brew install python3
+```
+安装好之后，目录一般是在这里,`/Users/${username}/Library/Python/3.8`
+- 安装code2flow
+    ```shell
+    pip3 install code2flow
+    ```
+- 安装graphviz
+```shell
+brew install graphviz
+```
+- 安装Acorn
+```shell
+npm i -g acorn
+```
 
 ## 技术栈
 

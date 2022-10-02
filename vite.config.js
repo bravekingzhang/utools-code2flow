@@ -6,6 +6,7 @@ import Modules from "vite-plugin-use-modules";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   plugins: [
@@ -23,5 +24,22 @@ export default defineConfig({
       dts: true,
       imports: ["vue", "vue-router"],
     }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: "./preload.js",
+          dest: ".",
+        },
+        {
+          src: "./logo.png",
+          dest: ".",
+        },
+        {
+          src: "./plugin.json",
+          dest: ".",
+        },
+      ],
+    }),
   ],
+  base: "./",
 });
